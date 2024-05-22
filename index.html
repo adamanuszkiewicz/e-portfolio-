@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "YOUR_PUBLIC_KEY",
+      });
+   })();
+</script>
+</head>
+<body>
+    <section id="landing-page" onmousemove="moveBackground(event)">
+        <nav>
+            <figure>
+                <img id="personal-logo" src="assets4/Tutorial Exclusive Eportfolio/assets/logo.svg" alt="">
+            </figure>    
+            <ul class="nav__link--list">
+                <li class="nav__link" onclick="toggleModal()">
+                    <a href="#" class="
+                        nav__link--anchor
+                        link__hover-effect
+                        link__hover-effect--black
+                    ">About</a>
+                </li>
+                <li class="nav__link" onclick="toggleModal()">
+                    <a href="#projects" class="
+                        nav__link--anchor
+                        link__hover-effect
+                        link__hover-effect--black
+                    ">Projects</a>
+                </li>
+                <li class="nav__link" onclick="toggleModal()">
+                    <a href="#" class="
+                        nav__link--anchor
+                        link__hover-effect
+                        link__hover-effect--black
+                    ">Contact</a>
+                </li>
+                <li class="nav__link click" onclick="toggleContrast()">
+                    <a href="#" class="
+                        nav__link--anchor
+                        link__hover-effect
+                        link__hover-effect--black
+                    "><i class="fas fa-adjust"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <header class="header">
+            <div class="header__content">
+                <h1 class="title">Hey</h1>
+                <h1 class="title"><b class="blue"> I'm Adam</b></h1 >
+                <p class="header__para">
+                    I am a <b class="blue">Frontend Software Engineer</b> with a strong 
+                    passion for user experience
+                    <br>
+                    Heres a bit more <b class="blue click" onclick="toggleModal()">about me.</b>
+                </p>
+                <div class="social__list">
+                    <a href="https://google.com" target="_blank" class="social__link click">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social__link click">
+                        <i class="fab fa-js"></i>
+                    </a>
+                    <a href="assets4/Tutorial Exclusive Eportfolio/assets/David Bragg Resume.pdf" class="social__link click">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <a href="#"></a>
+        <button class="mail__btn click" onclick="toggleModal()">
+            <i class="fa fa-envelope"></i>
+        </button>
+        <a href="#projects" class="scroll">
+            <div class="scroll__icon click"></div>
+        </a>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title modal__title--about">Here's a bit more <b class="blue" onclick="toggleModal()"></b> me.</h3>
+                <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
+                <p class="modal__para">
+                    I am an aspiring <b class="blue">frontend software engineer</b> with a strong passion for developing websites with great <b class="blue">user experience.</b>
+                    <br>
+                    I am currently learning how to code with Frontend Simplified and with the help of some of the most <b class="blue" >talented</b> and <b class="blue">experienced</b> software engineers.
+                    
+                </p>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="data:image/png;base64,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" alt="">
+                        <span class="language__name">HTML</span>
+                    </figure>    
+                    <figure class="modal__language" >
+                        <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="">
+                        <span class="language__name">CSS</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="">
+                        <span class="language__name">JS</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png" alt="">
+                        <span class="language__name">HTML</span>
+                    </figure>
+                </div>
+            </div>
+            <div class="modal__half modal__contact">
+                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+                <h3 class="modal__title modal__title--contact">
+                    Lets have a chat!
+                </h3>
+                <h3 class="modal__sub-title modal__sub-title--contact">
+                    I am currently open to new opertunities! I would love to hear from you!
+                </h3>
+                <form id="contact__form" onsubmit="contact(event)">
+                    <div class="form__item">
+                        <label class="form__item--label">Name</label>
+                        <input class="input" name="user_name" type="text"></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Email</label>
+                        <input class="input" name="user_email" type="email"></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Message</label>
+                        <textarea class="input" name="message" type="text"></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">
+                        Send it my way
+                    </button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for the message. Looking forward to speaking to you soon!
+                </div>
+            </div>
+        </div>
+        <img src="assets4/Tutorial Exclusive Eportfolio/assets/semi circle.svg" class="shape shape--0">
+        <img src="assets4/Tutorial Exclusive Eportfolio/assets/circle.svg" class="shape shape--1">
+        <img src="assets4/Tutorial Exclusive Eportfolio/assets/squiggly.svg" class="shape shape--2">
+        <img src="assets4/Tutorial Exclusive Eportfolio/assets/circle.svg" class="shape shape--3">
+        <img src="assets4/Tutorial Exclusive Eportfolio/assets/triangle.svg" class="shape shape--4">
+        <img src="assets4/Tutorial Exclusive Eportfolio/assets/circle.svg" class="shape shape--5">
+        <img src="assets4/Tutorial Exclusive Eportfolio/assets/squiggly.svg" class="shape shape--6">
+        <img src="assets4/Tutorial Exclusive Eportfolio/assets/circle.svg" class="shape shape--7">
+        <img src="assets4/Tutorial Exclusive Eportfolio/assets/semi circle.svg" class="shape shape--8">
+    </section>
+    <section id="projects">
+        <div class="container">
+            <div class="row">
+                <h1 class="section__title">
+                    Here are some of my <span class="blue">projects</span>
+                </h1>
+                <ul class="project__list">
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="assets4/Tutorial Exclusive Eportfolio/assets/blinker mockup.png" class="project__img" alt="">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    Car Sales Projects
+                                </h3>
+                                <h4 class="project__description--sub-title">
+                                    HTML, CSS, JavaScript
+                                </h4>
+                                <p class="project__description--para">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing 
+                                    elit. Optio deserunt, hic tempora autem delectus 
+                                    perspiciatis quam sapiente magnam laborum ex voluptate 
+                                    accusantium reprehenderit. Vitae obcaecati
+                                    debitis perspiciatis quibusdam, eligendi nulla!
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="#" class="project__description--link">
+                                        <i class="fa fa-github"></i>
+                                    </a>
+                                    <a href="#" class="project__description--link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="assets4/Tutorial Exclusive Eportfolio/assets/blinker mockup.png" class="project__img" alt="">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    Car Sales Projects
+                                </h3>
+                                <h4 class="project__description--sub-title">
+                                    HTML, CSS, JavaScript
+                                </h4>
+                                <p class="project__description--para">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing 
+                                    elit. Optio deserunt, hic tempora autem delectus 
+                                    perspiciatis quam sapiente magnam laborum ex voluptate 
+                                    accusantium reprehenderit. Vitae obcaecati
+                                    debitis perspiciatis quibusdam, eligendi nulla!
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="#" class="project__description--link">
+                                        <i class="fa fa-github"></i>
+                                    </a>
+                                    <a href="#" class="project__description--link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="assets4/Tutorial Exclusive Eportfolio/assets/blinker mockup.png" class="project__img" alt="">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    Car Sales Projects
+                                </h3>
+                                <h4 class="project__description--sub-title">
+                                    HTML, CSS, JavaScript
+                                </h4>
+                                <p class="project__description--para">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing 
+                                    elit. Optio deserunt, hic tempora autem delectus 
+                                    perspiciatis quam sapiente magnam laborum ex voluptate 
+                                    accusantium reprehenderit. Vitae obcaecati
+                                    debitis perspiciatis quibusdam, eligendi nulla!
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="#" class="project__description--link">
+                                        <i class="fa fa-github"></i>
+                                    </a>
+                                    <a href="#" class="project__description--link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row footer__row">
+                <figure>
+                    <img class="footer__logo--img" src="assets4/Tutorial Exclusive Eportfolio/assets/logo.svg" alt="">
+                </figure>
+                <div class="footer__social--list">
+                    <a href="#" targrt="_blank" class="
+                        footer__social--link
+                        link__hover-effect
+                        link__hover-effect--white
+                        ">
+                        Github
+                    </a>
+                    <a href="#" targrt="_blank" class="
+                        footer__social--link
+                        link__hover-effect
+                        link__hover-effect--white
+                        ">
+                        LinkedIn
+                    </a>
+                    <a href="#" onclick="toggleModal()" class="
+                        footer__social--link
+                        link__hover-effect
+                        link__hover-effect--white
+                        ">
+                        Contact
+                    </a>
+                    <a href="./assets4/Tutorial Exclusive Eportfolio/assets/David Bragg Resume.pdf" target="_blank" class="
+                        footer__social--link
+                        link__hover-effect
+                        link__hover-effect--white
+                        ">
+                        Resume
+                  </a>
+                </div>    
+                <div class="footer__copyright">Copyright&copy;2024 Adam Anuszkiewicz</div>
+            </div>    
+        </div>
+    </footer>
+</body>
+
+</html>
